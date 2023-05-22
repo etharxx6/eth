@@ -6,9 +6,14 @@ def add_customer():
     email = input("Enter customer email: ")
     phone = input("Enter customer phone number: ")
 
-    # Create a dictionary to store customer information
-      customer_info = {
-        "Name": name,
-        "Email": email,
-        "Phone": phone
-    }
+     # Create an issue to store customer data
+    issue_title = "Customer Data - {}".format(customer_data["customer_id"])
+    issue_body = """
+    Customer ID: {}
+    Name: {}
+    Email: {}
+    Phone: {}
+    """.format(customer_data["customer_id"], customer_data["name"], customer_data["email"], customer_data["phone"])
+ # Create the issue
+    issue = repo.create_issue(title=issue_title, body=issue_body)
+    print("Customer data stored successfully as an issue.")
