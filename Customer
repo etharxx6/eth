@@ -1,0 +1,14 @@
+customer_data = {}  # Dictionary to store customer data
+
+def add_customer():
+    customer_id = input("Enter customer ID: ")
+    name = input("Enter customer name: ")
+    email = input("Enter customer email: ")
+    phone = input("Enter customer phone number: ")
+
+    # Create a dictionary to store customer information
+      customer_info = {
+        "Name": name,
+        "Email": email,
+        "Phone": phone
+    }
